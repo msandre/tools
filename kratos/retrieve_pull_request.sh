@@ -34,7 +34,6 @@ git clone https://github.com/KratosMultiphysics/Kratos.git $dir && cd $dir
 git fetch origin $branch:$branch
 
 readonly merge_base=$(git merge-base master $branch)
-echo $merge_base
 git checkout $merge_base
 
 for file in $(git diff --name-only --diff-filter=ACMRTUXB $merge_base $branch); do
