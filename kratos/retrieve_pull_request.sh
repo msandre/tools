@@ -22,6 +22,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
+if [[ $# != 1 ]]; then
+    echo "Only one argument is allowed (name of branch)"
+    exit
+fi
+
 readonly branch=$1
 readonly dir=$(pwd)/$branch
 
